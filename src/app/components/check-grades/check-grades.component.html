@@ -1,0 +1,14 @@
+<div *ngIf="size > 0">
+    <h1>Grades of student {{testResults[0].student}}</h1>
+    <div class="options" *ngFor="let testResult of testResults">
+      <h2>Test Name: {{testResult.testName}}</h2>
+      <h2>Grade: {{testResult.result}}</h2>
+      <h2>----------------------------</h2>
+    </div>
+</div>
+<div *ngIf="size == 0">
+    <h2>No Tests Solved</h2>
+</div>
+<p>
+    <button routerLink="/student">Back</button>
+</p>

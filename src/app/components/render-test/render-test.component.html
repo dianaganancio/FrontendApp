@@ -1,0 +1,27 @@
+<div class="question" *ngFor="let question of test.questions">
+    <div class="title">
+      <h2>Question: {{question.title}}</h2>
+    </div>
+    <div class="options" *ngFor="let answer of question.possibleAnswers">
+      <label>
+      Option: {{answer.description}}
+    </label>
+    </div>
+  </div>
+  <br/>
+  <div *ngIf="numberOfGrades == 0">
+    <h2>This test has not been solved yet</h2>
+  </div>
+  <div *ngIf="numberOfGrades > 0">
+  <div class="results" *ngFor="let testResult of testResults">
+    <label>
+      Student: {{testResult.student}}
+    </label>
+    <br/>
+    <label>
+      Grade: {{testResult.result}}
+    </label>
+  </div>
+  <br/>
+</div>
+  <button routerLink="/see-test-list">Return</button>

@@ -1,0 +1,17 @@
+<h1>Welcome, {{user.name}}</h1>
+<div *ngIf="size > 0">
+ <div class="tests" *ngFor="let test of tests">
+    <a><button (click)='solveTest(test)'>Solve {{test.testName}}</button></a>
+    <br/>
+  </div>
+</div>
+<div *ngIf="size == 0">
+  <h2>No Tests Available</h2>
+</div>
+<p>
+  <button routerLink="/check-grades">Check grades</button>
+</p>
+<p>
+  <button routerLink="/login">Logout</button>
+</p>
+<router-outlet></router-outlet>

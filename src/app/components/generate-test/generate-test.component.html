@@ -1,0 +1,11 @@
+<form (submit)="generateTest($event)">
+    <label><input type="text" placeholder="How many questions" id="num" name="num" [(ngModel)]="num">
+      How Many Questions On The Test?
+    </label>
+    <br/>
+    <label><input type="text" placeholder="Test Name" id="testName" name="testName" [(ngModel)]="testName">
+      Test Name
+    </label>
+    <br/>
+    <input type="submit" value="Generate Test">
+  </form>

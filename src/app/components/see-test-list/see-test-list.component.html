@@ -1,0 +1,14 @@
+<div *ngIf="size > 0">
+    <div class="tests" *ngFor="let test of allTests">
+      <div class="test">
+        <input class="test" type="button" name="{{test.testName}}" value="{{test.testName}}"
+          (click)="renderTest(test)" />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="size == 0">
+    <h2>No Tests Available</h2>
+  </div>
+  <p>
+    <button routerLink="/admin">Return</button>
+  </p>

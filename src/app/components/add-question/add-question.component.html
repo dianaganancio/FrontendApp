@@ -1,0 +1,17 @@
+<form (submit)="addQuestion($event)">
+    <input type="text" placeholder="Question" id="question">
+    <br/>
+    <input type="text" placeholder="Option1" id="option1" name="option1" [(ngModel)]="option1">
+    <input class="form-check-input" type="radio" name="option1Correct" value="1" (change)="handleChange($event)"/>
+    <br/>
+    <input type="text" placeholder="Option2" id="option2" name="option2" [(ngModel)]="option2">
+    <input class="form-check-input" type="radio" name="option2Correct" value="2" (change)="handleChange($event)"/>
+    <br/>
+    <input type="text" placeholder="Option3" id="option3" name="option3" [(ngModel)]="option3">
+    <input class="form-check-input" type="radio" name="option3Correct" value="3" (change)="handleChange($event)"/>
+    <br/>
+    <input type="text" placeholder="Option4" id="option4" name="option4" [(ngModel)]="option4">
+    <input class="form-check-input" type="radio" name="option4Correct" value="4" (change)="handleChange($event)"/>
+    <br/>
+    <input type="submit" value="submit">
+  </form>
